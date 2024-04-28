@@ -9,7 +9,7 @@ class Solution:
         if n == 0:
             return
         if nums2[0] >= nums1[m - 1]:
-            nums1[m:m + n] = nums2
+            nums1[m : m + n] = nums2
             return
         pointer = m + n - 1
         m -= 1

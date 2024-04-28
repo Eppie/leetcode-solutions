@@ -16,5 +16,7 @@ class Solution:
         if len(digits) == 1:
             return list(self.num_to_letter[int(digits[0])])
         return [
-            first_letter + the_rest for first_letter in self.num_to_letter[int(digits[0])] for the_rest in
-            self.letterCombinations(digits[1:])]
+            first_letter + the_rest
+            for first_letter in self.num_to_letter[int(digits[0])]
+            for the_rest in self.letterCombinations(digits[1:])
+        ]
