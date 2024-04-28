@@ -32,7 +32,7 @@ class Solution:
         return first_node
 
     def addTwoNumbers(
-            self, l1: ListNode | None, l2: ListNode | None
+        self, l1: ListNode | None, l2: ListNode | None
     ) -> ListNode | None:
         n1 = self.node_to_int(l1)
         n2 = self.node_to_int(l2)
@@ -44,4 +44,6 @@ if __name__ == "__main__":
     l2 = ListNode(5, ListNode(6, ListNode(4)))
     s = Solution()
     test_output = s.addTwoNumbers(l1, l2)
-    assert str(test_output) == str(ListNode(7, ListNode(0, ListNode(8)))), f"{test_output}"
+    assert str(test_output) == str(
+        ListNode(7, ListNode(0, ListNode(8)))
+    ), f"{test_output}"
