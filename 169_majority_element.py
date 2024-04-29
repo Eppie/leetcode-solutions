@@ -10,5 +10,3 @@ class Solution:
 if __name__ == "__main__":
     s = Solution()
     assert s.majorityElement([1, 2, 3, 3]) == 3
-
-
