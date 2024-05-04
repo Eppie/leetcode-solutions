@@ -1,22 +1,4 @@
-class TrieNode:
-    def __init__(self):
-        self.children = {}
-        self.endOfWord = False
-        self.value = ""
-
-
-class Trie:
-    def __init__(self):
-        self.root = TrieNode()
-
-    def addWord(self, word):
-        cur = self.root
-        for c in word:
-            if c not in cur.children:
-                cur.children[c] = TrieNode()
-            cur = cur.children[c]
-        cur.endOfWord = True
-        cur.value = word
+from common.trie import Trie
 
 
 class Solution:
