@@ -2,7 +2,8 @@ class Solution:
     def longestCommonSubsequence(self, str1: str, str2: str) -> int:
         """
         The `table` keeps track of the longest common subsequence we can make with the given prefixes of `str1` and `str2`.
-        For example, if `str1` is "ABB" and `str2` is "BBD", `table` will contain the following:
+        `table[i][j]` represents the LCS of `str1[:i]` and `str2[:j]`. For example,
+        if `str1` is "ABB" and `str2` is "BBD", `table` will contain the following:
         [0, 0, 0, 0]: length 0 prefix of `str1` ("") has no common subsequences
         [0, 0, 0, 0]: length 1 prefix of `str1` ("A") has no common subsequences because `str2` does not contain an "A".
         [0, 1, 1, 1]: length 2 prefix of `str1` ("AB") has a length 1 common subsequence
